@@ -17,7 +17,7 @@ def home():
         artist = spotify['artist'].split(';')[0]
     status = lanyard['discord_status']
 
-    message = commits[0]['message']
+    message = commits[0]['commit']['message']
     
     return render_template('index.html', spotify=spotify, title=title, artist=artist, commit=message)
 

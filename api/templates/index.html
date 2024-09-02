@@ -43,7 +43,8 @@
 	            padding: 10px;
                 border-radius: 16px;
                 transition: 500ms;
-                display: flex;
+
+                display: flex;align-items: center; justify-content: center;
                 gap: 10px;
                 	            border: solid 1px #36382E;
 
@@ -118,19 +119,6 @@
 		        </pre>
 		    </div>
 		</div>
-		
-		<script>let projectCards = document.querySelectorAll('.project_card');
-
-		    projectCards.forEach(card => {
-  card.addEventListener('mousemove', e => {
-    let rect = e.target.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-    let y = e.clientY - rect.top;
-    card.style.setProperty('--x', x + 'px');
-    card.style.setProperty('--y', y + 'px');
-  });
-});
-		</script>
 		<p>
 		    <i class='bx bx-git-commit'></i> <b>latest commit</b> - {{commit}}
 		</p>

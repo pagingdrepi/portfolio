@@ -29,7 +29,7 @@ def home():
     message = commits[0]['commit']['message'] if commits else 'No commits found'
 
     # Render the template with the extracted data
-    return render_template('index.html', spotify=spotify, title=title, artist=artist, commit=message)
+    return render_template('index.html', spotify=spotify, title=title, artist=artist, commit=message, status=status)
     
 if __name__ == '__main__':
     app.run(debug=True)

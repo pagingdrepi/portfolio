@@ -22,8 +22,8 @@ def home():
         title = None
         artist = None
         if spotify:
-            title = spotify.get('song')
-            artist = spotify.get('artist', '').split(';')[0]
+            title = spotify.get('song').lower()
+            artist = spotify.get('artist', '').split(';')[0].lower()
 
         # Extract Discord status
         status = lanyard.get('data', {}).get('discord_status')

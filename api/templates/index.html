@@ -1,169 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>epidermal</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+<HTML>
+	<HEAD><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	    <title>
+	        epidermal
+	    </title>
+	    <style>@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+	    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');.tools > a {
+  height: 24px
+}
+	        html, body {
+	            background: #36382E;
+	            color: #EDE6E3;  font-family: "Sono", monospace;
+	            padding: 50px;
+                
+	        }h1,h2,h3,h4,h5,h6 {font-family: "Lexend", sans-serif;}
+	        a{color:inherit;}
+	        .secondary {
+	            color: #808782;
+	        }*{text-wrap: pretty;}
+	        
+	        .project_card {
+	            width: 300px;
+	            height: 100px;
+	            background: rgba(255, 255, 255, 0.11);
+	            padding: 10px;
+	            text-wrap: pretty;
+	            border: solid 1px #36382E;
+                border-radius: 16px;
+                transition: 500ms;
+                display: flex;
+                gap: 10px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(7.8px);
+                -webkit-backdrop-filter: blur(7.8px);
+	        }
+	        
+	        .dnd { color: #ff6e63; }
+	        .idle { color: #ffef63; }
+	        .online { color: #9cff63; }
+	        .offline { color: #474747; }
+	        
+	        .tools {
+	            background: rgba(255, 255, 255, 0.11);
+	            padding: 10px;
+                border-radius: 16px;
+			align-items: center; justify-content: center;
+                transition: 500ms;
 
-        html, body {
-            background: #36382E;
-            color: #EDE6E3;
-            font-family: "Sono", monospace;
-            margin: 0;
-            padding: 20px;
-        }
+                display: flex;
+                gap: 10px;
+                	            border: solid 1px #36382E;
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Lexend", sans-serif;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .secondary {
-            color: #808782;
-        }
-
-        .project_card {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            background: rgba(255, 255, 255, 0.11);
-            padding: 10px;
-            border: solid 1px #36382E;
-            border-radius: 16px;
-            transition: 500ms;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(7.8px);
-            -webkit-backdrop-filter: blur(7.8px);
-        }
-
-        .dnd { color: #ff6e63; }
-        .idle { color: #ffef63; }
-        .online { color: #9cff63; }
-        .offline { color: #474747; }
-
-        .tools {
-            background: rgba(255, 255, 255, 0.11);
-            padding: 10px;
-            border-radius: 16px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            border: solid 1px #36382E;
-            font-size: 24px;
-            transition: 500ms;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(7.8px);
-            -webkit-backdrop-filter: blur(7.8px);
-        }
-
-        .tools:hover {
-            border: solid 1px #EDE6E3;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .project_card:hover {
-            border: solid 1px #EDE6E3;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-
-            .project_card {
-                width: 100%;
-            }
-
-            .tools {
-                font-size: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>
-        <span class='secondary'>@</span>epidermal
-    </h1>
-
-    <div class='status {{status}}'>
-        <i class='bx bxl-discord-alt'></i> I'm {{status}} on Discord
-    </div>
-
-    {% if spotify %}
+                font-size: 24px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(7.8px);
+                -webkit-backdrop-filter: blur(7.8px);
+	        }.tools:hover { border: solid 1px #EDE6E3;}.container{display:flex;}.project_card:hover {
+	            border: solid 1px #EDE6E3;
+	        }
+	    </style>
+	</HEAD>
+	<BODY>
+		<h1>
+		    <span class='secondary'>@</span>epidermal
+		</h1>
+		
+		<div class='status {{status}}'>
+		    <i class='bx bxl-discord-alt'></i> i'm {{status}} on discord
+		</div>
+		{% if spotify %}
     <div class='spotify'>
-        <i class='bx bxl-spotify'></i> Listening to <b>{{title}}</b> by <b>{{artist}}</b>
-    </div>
+		    <i class='bx bxl-spotify' ></i> listening to <b>{{title}}</b> by <b>{{artist}}</b>
+		</div>
     {% endif %}
-
-    <div class='container'>
-        <h3>Tools I Use</h3>
-        <div class='tools'>
-            <a href='https://code.visualstudio.com/'>
-                <i class='bx bxl-visual-studio'></i>
-            </a>
-            <a href='https://github.com'>
-                <i class='bx bxl-github'></i>
-            </a>
-            <a href='https://nodejs.org'>
-                <i class='bx bxl-nodejs'></i>
-            </a>
-            <a href='https://apple.com'>
-                <i class='bx bxl-apple'></i>
-            </a>
-            <a href='https://python.org'>
-                <i class='bx bxl-python'></i>
-            </a>
-            <a href='https://linuxfromscratch.org'>
-                <i class='bx bxl-tux'></i>
-            </a>
-            <a href='https://en.wikipedia.org/wiki/HTML5'>
-                <i class='bx bxl-html5'></i>
-            </a>
-            <a href='https://telegram.org'>
-                <i class='bx bxl-telegram'></i>
-            </a>
-            <a href='https://gmail.com'>
-                <i class='bx bxl-gmail'></i>
-            </a>
-            <a href='https://jquery.com'>
-                <i class='bx bxl-jquery'></i>
-            </a>
-            <a href='https://google.com/chrome/'>
-                <i class='bx bxl-chrome'></i>
-            </a>
-        </div>
-    </div>
-
-    <div class='projects'>
-        <h3>Projects</h3>
-        <div class='project_card'>
-            <pre>
+		
+		<br/>
+		<h3>tools i use</h3>
+		<div class='container'>
+		    		<div class='tools'>
+		    <a href='https://code.visualstudio.com/'>
+		        <i class='bx bxl-visual-studio'></i>
+		    </a>
+		    <a href='https://github.com'>
+		        <i class='bx bxl-github' ></i>
+		    </a>
+		    <a href='https://nodejs.org'>
+		        <i class='bx bxl-nodejs' ></i>
+		    </a>
+		    <a href='https://apple.com'>
+		        <i class='bx bxl-apple' ></i>
+		    </a>
+		    <a href='https://python.org'>
+		        <i class='bx bxl-python' ></i>
+		    </a>
+		    <a href='https://linuxfromscratch.org'>
+		        <i class='bx bxl-tux' ></i>
+		    </a>
+		    <a href='https://en.wikipedia.org/wiki/HTML5'>
+		        <i class='bx bxl-html5' ></i>
+		    </a>
+		    <a href='https://telegram.org'>
+		        <i class='bx bxl-telegram' ></i>
+		    </a>
+		    <a href='https://gmail.com'>
+		        <i class='bx bxl-gmail' ></i>
+		    </a>
+		    <a href='https://jquery.com'>
+		        <i class='bx bxl-jquery' ></i>
+		    </a>
+		    <a href='https://google.com/chrome/'>
+		        <i class='bx bxl-chrome' ></i>
+		    </a>
+		</div>
+		</div><div class='projects'>
+		    <h3>projects</h3>
+		    <div class='project_card'>
+		        <pre>
 <b>cadet</b>
-<p>Anonymous social media that allows you to post once a minute with automatic censoring (cadet.epidermal.link)</p>
-            </pre>
-        </div>
-    </div>
-
-    <p>
-        <i class='bx bx-git-commit'></i> <b>Latest commit</b> - {{commit}}
-    </p>
-</body>
-</html>
+<p>anonymous social media that allows you to post once a minute with automatic censoring (cadet.epidermal.link)
+</p>
+		        </pre>
+		    </div>
+		</div>
+		<p>
+		    <i class='bx bx-git-commit'></i> <b>latest commit</b> - {{commit}}
+		</p>
+	</BODY>
+</HTML>

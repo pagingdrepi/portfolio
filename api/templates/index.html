@@ -1,170 +1,206 @@
 <!DOCTYPE html>
 <HTML>
-	<HEAD><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-	    <title>
-	        epidermal
-	    </title>
-	    <style>@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
-	    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');.tools > a {
-  height: 24px
-}
-	        html, body {
-	            background: #36382E;
-	            color: #EDE6E3;  font-family: "Sono", monospace;
-	            padding: 50px;
-                
-	        }h1,h2,h3,h4,h5,h6 {font-family: "Lexend", sans-serif;}
-	        a{color:inherit;}
-	        .secondary {
-	            color: #808782;
-	        }*{text-wrap: pretty;}
-	        
-	        .project_card {
-	            width: 300px;
-	            height: 100px;
-	            background: rgba(255, 255, 255, 0.11);
-	            padding: 10px;
-	            text-wrap: pretty;
-	            border: solid 1px #36382E;
-                border-radius: 16px;
-                transition: 500ms;
-                display: flex;
-                gap: 10px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(7.8px);
-                -webkit-backdrop-filter: blur(7.8px);
-	        }
-	        
-	        .dnd { color: #ff6e63; }
-	        .idle { color: #ffef63; }
-	        .online { color: #9cff63; }
-	        .offline { color: #474747; }
-	        
-	        .tools {
-	            background: rgba(255, 255, 255, 0.11);
-	            padding: 10px;
-                border-radius: 16px;
-			align-items: center; justify-content: center;
-                transition: 500ms;
+  <HEAD>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title> epidermal </title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-                display: flex;
-                gap: 10px;
-                	            border: solid 1px #36382E;
+      .tools>a {
+        height: 24px
+      }
 
-                font-size: 24px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(7.8px);
-                -webkit-backdrop-filter: blur(7.8px);
-	        }.tools:hover { border: solid 1px #EDE6E3;}.container{display:flex;}.project_card:hover {
-	            border: solid 1px #EDE6E3;
-	        }
-	    </style><script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://unpkg.com/tippy.js@6"></script>
-	</HEAD>
-	<BODY>
-		<h1>
-		    <span class='secondary'>@</span>epidermal
-		</h1>
-		
-		<div class='status {{status}}'>
-		    <i class='bx bxl-discord-alt'></i> i'm {{status}} on discord
-		</div>
-		{% if spotify %}
-    <div class='spotify'>
-		    <i class='bx bxl-spotify' ></i> listening to <b>{{title}}</b> by <b>{{artist}}</b>
-		</div>
-    {% endif %}
-		
-		<br/>
-		<h3>tools i use</h3>
-		<div class='container'>
-		    		<div class='tools'>
-		    <a href='https://code.visualstudio.com/' id='vsc'>
-		        <i class='bx bxl-visual-studio'></i>
-		    </a>
-		    <a href='https://github.com' id='git'>
-		        <i class='bx bxl-github' ></i>
-		    </a>
-		    <a href='https://nodejs.org' id='nod'>
-		        <i class='bx bxl-nodejs' ></i>
-		    </a>
-		    <a href='https://apple.com' id='mac'>
-		        <i class='bx bxl-apple' ></i>
-		    </a>
-		    <a href='https://python.org' id='pyt'>
-		        <i class='bx bxl-python' ></i>
-		    </a>
-		    <a href='https://linuxfromscratch.org' id='lfs'>
-		        <i class='bx bxl-tux' ></i>
-		    </a>
-		    <a href='https://en.wikipedia.org/wiki/HTML5' id='htm'>
-		        <i class='bx bxl-html5' ></i>
-		    </a>
-		    <a href='https://telegram.org' id='tel'> 
-		        <i class='bx bxl-telegram' ></i>
-		    </a>
-		    <a href='https://gmail.com' id='gma'>
-		        <i class='bx bxl-gmail' ></i>
-		    </a>
-		    <a href='https://jquery.com' id='jqy'>
-		        <i class='bx bxl-jquery' ></i>
-		    </a>
-		    <a href='https://google.com/chrome/' id='chr'>
-		        <i class='bx bxl-chrome' ></i>
-		    </a>
-		</div>
-		</div><div class='projects'>
-		    <h3>projects</h3>
-		    <div class='project_card'>
-		        <pre>
-<b>cadet</b>
-<p>anonymous social media that allows you to post once a minute with automatic censoring (cadet.epidermal.link)
+      html,
+      body {
+        background: #36382E;
+        color: #EDE6E3;
+        font-family: "Sono", monospace;
+        padding: 50px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Lexend", sans-serif;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .secondary {
+        color: #808782;
+      }
+
+      * {
+        text-wrap: pretty;
+      }
+
+      .project_card {
+        width: 300px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.11);
+        padding: 10px;
+        text-wrap: pretty;
+        border: solid 1px #36382E;
+        border-radius: 16px;
+        transition: 500ms;
+        display: flex;
+        gap: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.8px);
+        -webkit-backdrop-filter: blur(7.8px);
+      }
+
+      .dnd {
+        color: #ff6e63;
+      }
+
+      .idle {
+        color: #ffef63;
+      }
+
+      .online {
+        color: #9cff63;
+      }
+
+      .offline {
+        color: #474747;
+      }
+
+      .tools {
+        background: rgba(255, 255, 255, 0.11);
+        padding: 10px;
+        border-radius: 16px;
+        align-items: center;
+        justify-content: center;
+        transition: 500ms;
+        display: flex;
+        gap: 10px;
+        border: solid 1px #36382E;
+        font-size: 24px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.8px);
+        -webkit-backdrop-filter: blur(7.8px);
+      }
+
+      .tools:hover {
+        border: solid 1px #EDE6E3;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .project_card:hover {
+        border: solid 1px #EDE6E3;
+      }
+    </style>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+  </HEAD>
+  <BODY>
+    <h1>
+      <span class='secondary'>@</span>epidermal
+    </h1>
+    <div class='status {{status}}'>
+      <i class='bx bxl-discord-alt'></i> i'm {{status}} on discord
+    </div> {% if spotify %} <div class='spotify'>
+      <i class='bx bxl-spotify'></i> listening to <b>{{title}}</b> by <b>{{artist}}</b>
+    </div> {% endif %} <br />
+    <h3>tools i use</h3>
+    <div class='container'>
+      <div class='tools'>
+        <a href='https://code.visualstudio.com/' id='vsc'>
+          <i class='bx bxl-visual-studio'></i>
+        </a>
+        <a href='https://github.com' id='git'>
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href='https://nodejs.org' id='nod'>
+          <i class='bx bxl-nodejs'></i>
+        </a>
+        <a href='https://apple.com' id='mac'>
+          <i class='bx bxl-apple'></i>
+        </a>
+        <a href='https://python.org' id='pyt'>
+          <i class='bx bxl-python'></i>
+        </a>
+        <a href='https://linuxfromscratch.org' id='lfs'>
+          <i class='bx bxl-tux'></i>
+        </a>
+        <a href='https://en.wikipedia.org/wiki/HTML5' id='htm'>
+          <i class='bx bxl-html5'></i>
+        </a>
+        <a href='https://telegram.org' id='tel'>
+          <i class='bx bxl-telegram'></i>
+        </a>
+        <a href='https://gmail.com' id='gma'>
+          <i class='bx bxl-gmail'></i>
+        </a>
+        <a href='https://jquery.com' id='jqy'>
+          <i class='bx bxl-jquery'></i>
+        </a>
+        <a href='https://google.com/chrome/' id='chr'>
+          <i class='bx bxl-chrome'></i>
+        </a>
+      </div>
+    </div>
+    <div class='projects'>
+      <h3>projects</h3>
+      <div class='project_card'>
+        <pre>
+						<b>cadet</b>
+						<p>anonymous social media that allows you to post once a minute with automatic censoring (cadet.epidermal.link)
 </p>
-		        </pre>
-		    </div>
-		</div>
-		<p>
-		    <i class='bx bx-git-commit'></i> <b>latest commit</b> - {{commit}}
-		</p>
-		<script>
-			      tippy('#git', {
+					</pre>
+      </div>
+    </div>
+    <p>
+      <i class='bx bx-git-commit'></i>
+      <b>latest commit</b> - {{commit}}
+    </p>
+    <script>
+      tippy('#git', {
         content: 'GitHub',
       });
-						      tippy('#vsc', {
+      tippy('#vsc', {
         content: 'Visual Studio Code',
       });
-
-									      tippy('#jqy', {
+      tippy('#jqy', {
         content: 'jQuery',
       });
-
-									      tippy('#nod', {
+      tippy('#nod', {
         content: 'Node.js',
       });
-				   tippy('#mac', {
+      tippy('#mac', {
         content: 'MacOS',
       });
-							   tippy('#mac', {
+      tippy('#mac', {
         content: 'MacOS',
       });
-							   tippy('#pyt', {
+      tippy('#pyt', {
         content: 'Python',
       });
-							   tippy('#lfs', {
+      tippy('#lfs', {
         content: 'Linux from Scratch',
       });
-							   tippy('#gma', {
+      tippy('#gma', {
         content: 'Google Mail',
       });
-										   tippy('#tel', {
+      tippy('#tel', {
         content: 'Telegram',
       });
-						      tippy('#chr', {
+      tippy('#chr', {
         content: 'Google Chrome',
       });
-									      tippy('#htm', {
+      tippy('#htm', {
         content: 'HTML',
       });
-		</script>
-	</BODY>
+    </script>
+  </BODY>
 </HTML>

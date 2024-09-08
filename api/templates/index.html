@@ -58,7 +58,8 @@
 	        }.tools:hover { border: solid 1px #EDE6E3;}.container{display:flex;}.project_card:hover {
 	            border: solid 1px #EDE6E3;
 	        }
-	    </style>
+	    </style><script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
 	</HEAD>
 	<BODY>
 		<h1>
@@ -78,37 +79,37 @@
 		<h3>tools i use</h3>
 		<div class='container'>
 		    		<div class='tools'>
-		    <a href='https://code.visualstudio.com/'>
+		    <a href='https://code.visualstudio.com/' id='vsc'>
 		        <i class='bx bxl-visual-studio'></i>
 		    </a>
-		    <a href='https://github.com'>
+		    <a href='https://github.com' id='git'>
 		        <i class='bx bxl-github' ></i>
 		    </a>
-		    <a href='https://nodejs.org'>
+		    <a href='https://nodejs.org' id='nod'>
 		        <i class='bx bxl-nodejs' ></i>
 		    </a>
-		    <a href='https://apple.com'>
+		    <a href='https://apple.com' id='mac'>
 		        <i class='bx bxl-apple' ></i>
 		    </a>
-		    <a href='https://python.org'>
+		    <a href='https://python.org' id='pyt'>
 		        <i class='bx bxl-python' ></i>
 		    </a>
-		    <a href='https://linuxfromscratch.org'>
+		    <a href='https://linuxfromscratch.org' id='lfs'>
 		        <i class='bx bxl-tux' ></i>
 		    </a>
-		    <a href='https://en.wikipedia.org/wiki/HTML5'>
+		    <a href='https://en.wikipedia.org/wiki/HTML5' id='htm'>
 		        <i class='bx bxl-html5' ></i>
 		    </a>
-		    <a href='https://telegram.org'>
+		    <a href='https://telegram.org' id='tel'> 
 		        <i class='bx bxl-telegram' ></i>
 		    </a>
-		    <a href='https://gmail.com'>
+		    <a href='https://gmail.com' id='gma'>
 		        <i class='bx bxl-gmail' ></i>
 		    </a>
-		    <a href='https://jquery.com'>
+		    <a href='https://jquery.com' id='jqy'>
 		        <i class='bx bxl-jquery' ></i>
 		    </a>
-		    <a href='https://google.com/chrome/'>
+		    <a href='https://google.com/chrome/' id='chr'>
 		        <i class='bx bxl-chrome' ></i>
 		    </a>
 		</div>
@@ -125,5 +126,45 @@
 		<p>
 		    <i class='bx bx-git-commit'></i> <b>latest commit</b> - {{commit}}
 		</p>
+		<script>
+			      tippy('#git', {
+        content: 'GitHub',
+      });
+						      tippy('#vsc', {
+        content: 'Visual Studio Code',
+      });
+
+									      tippy('#jqy', {
+        content: 'jQuery',
+      });
+
+									      tippy('#nod', {
+        content: 'Node.js',
+      });
+				   tippy('#mac', {
+        content: 'MacOS',
+      });
+							   tippy('#mac', {
+        content: 'MacOS',
+      });
+							   tippy('#pyt', {
+        content: 'Python',
+      });
+							   tippy('#lfs', {
+        content: 'Linux from Scratch',
+      });
+							   tippy('#gma', {
+        content: 'Google Mail',
+      });
+										   tippy('#tel', {
+        content: 'Telegram',
+      });
+						      tippy('#chr', {
+        content: 'Google Chrome',
+      });
+									      tippy('#htm', {
+        content: 'HTML',
+      });
+		</script>
 	</BODY>
 </HTML>

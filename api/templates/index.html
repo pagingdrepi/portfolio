@@ -1,203 +1,119 @@
 <!DOCTYPE html>
-<HTML>
-  <HEAD>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title> epidermal </title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
-      .tools>a {
-        height: 24px
-      }
-
-      html,
-      body {
-        background: #36382E;
-        color: #EDE6E3;
-        font-family: "Sono", monospace;
-        padding: 50px;
-      }
-
-	    .project_card p {
-		    font-size: 14px;
-	    }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Lexend", sans-serif;
-      }
-
-      a {
-        color: inherit;
-      }
-
-      .secondary {
-        color: #808782;
-      }
-
-      * {
-        text-wrap: pretty;
-      }
-
-      .project_card {
-        width: 300px;
-        height: 100px;
-        background: rgba(255, 255, 255, 0.11);
-        padding: 10px;
-        text-wrap: pretty;
-        border: solid 1px #36382E;
-        border-radius: 16px;
-        transition: 500ms;
-        display: flex;
-        gap: 10px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.8px);
-        -webkit-backdrop-filter: blur(7.8px);
-      }
-
-      .dnd {
-        color: #ff6e63;
-      }
-
-      .idle {
-        color: #ffef63;
-      }
-
-      .online {
-        color: #9cff63;
-      }
-
-      .offline {
-        color: #474747;
-      }
-
-      .tools {
-        background: rgba(255, 255, 255, 0.11);
-        padding: 10px;
-        border-radius: 16px;
-        align-items: center;
-        justify-content: center;
-        transition: 500ms;
-        display: flex;
-        gap: 10px;
-        border: solid 1px #36382E;
-        font-size: 24px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.8px);
-        -webkit-backdrop-filter: blur(7.8px);
-      }
-
-      .tools:hover {
-        border: solid 1px #EDE6E3;
-      }
-
-      .container {
-        display: flex;
-      }
-
-      .project_card:hover {
-        border: solid 1px #EDE6E3;
-      }
-    </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𓏲 ๋࣭  ࣪‧₊🪼˚‧ ✧𓍢ִִ໋˚.</title>
+    <style>.content,.shark #logo,.shark #shark{position:relative}@font-face{font-family:'Neue Haas Display';src:url('https://files.catbox.moe/wzwn7p.ttf');font-weight:700}@font-face{font-family:'Neue Haas Display';src:url('https://files.catbox.moe/o09b53.ttf');font-weight:400}@font-face{font-family:'Apple Color Emoji';src:url('AppleColorEmoji.ttf');font-weight:400}html{background-color:#5f8aff;background-image:url("data:image/svg+xml,%3Csvg width='40' height='1' viewBox='0 0 40 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v1H0z' fill='%2375acff' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");font-family:'Neue Haas Display'}#emoji{font-family:'Apple Color Emoji'}h1,h2,h3,h4,h5,h6{color:#000}.container,body,html{padding:0;margin:0;border:none;width:100%;height:100%;display:flex;justify-content:center;align-items:center}.shark{padding:40px;border:5px solid #17507a;background:#c9e8ff;border-radius:25px;width:500px;height:500px}.project_card,.tools{background:rgba(255,255,255,.11);padding:10px;transition:.5s;display:flex;box-shadow:0 4px 30px rgba(0,0,0,.1)}.shark #logo{width:520px;top:-125px;left:-125px}.shark #shark{width:375px;top:175px;left:275px}.content{color:#2d3142;top:-550px}.tools>a{height:24px}a{color:inherit}a:not(#exception){text-decoration:none}.tools{border-radius:16px;align-items:center;justify-content:center;gap:17px;width:100%;border:1px solid #36382e;font-size:24px;backdrop-filter:blur(7.8px);-webkit-backdrop-filter:blur(7.8px)}.container{display:flex}.project_card{width:300px;height:100px;text-wrap:pretty;border:1px solid #36382e;border-radius:16px;gap:10px;backdrop-filter:blur(7.8px);-webkit-backdrop-filter:blur(7.8px)}.project_card p{font-size:14px}</style>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-  </HEAD>
-  <BODY>
-    <h1>
-      <span class='secondary'>@</span>epidermal
-    </h1>
-    <h3>tools i use</h3>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
     <div class='container'>
-      <div class='tools'>
-        <a href='https://code.visualstudio.com/' id='vsc'>
-          <i class='bx bxl-visual-studio'></i>
-        </a>
-        <a href='https://github.com' id='git'>
-          <i class='bx bxl-github'></i>
-        </a>
-        <a href='https://nodejs.org' id='nod'>
-          <i class='bx bxl-nodejs'></i>
-        </a>
-        <a href='https://apple.com' id='mac'>
-          <i class='bx bxl-apple'></i>
-        </a>
-        <a href='https://python.org' id='pyt'>
-          <i class='bx bxl-python'></i>
-        </a>
-        <a href='https://linuxfromscratch.org' id='lfs'>
-          <i class='bx bxl-tux'></i>
-        </a>
-        <a href='https://en.wikipedia.org/wiki/HTML5' id='htm'>
-          <i class='bx bxl-html5'></i>
-        </a>
-        <a href='https://telegram.org' id='tel'>
-          <i class='bx bxl-telegram'></i>
-        </a>
-        <a href='https://gmail.com' id='gma'>
-          <i class='bx bxl-gmail'></i>
-        </a>
-        <a href='https://jquery.com' id='jqy'>
-          <i class='bx bxl-jquery'></i>
-        </a>
-        <a href='https://google.com/chrome/' id='chr'>
-          <i class='bx bxl-chrome'></i>
-        </a>
-      </div>
+        <div class='shark'>
+            <div class='pics'>
+                <img src='https://files.catbox.moe/krfxkm.png' id='logo'>
+                <img src='https://files.catbox.moe/3sh262.png' id='shark'>
+            </div>
+            <div class='content'>
+                <h1>
+                    hey, i'm epidermal <span id='emoji'>🌊</span>
+                </h1>
+                <p>i'm a self taught fullstack dev who loves to program silly things. can you guess my favorite color?</p>
+                <h1>
+                    skills // tools <span id='emoji'>🫧</span>
+                </h1>
+                <div class='container'>
+                    <div class='tools'>
+                      <a href='https://code.visualstudio.com/' id='vsc'>
+                        <i class='bx bxl-visual-studio'></i>
+                      </a>
+                      <a href='https://github.com' id='git'>
+                        <i class='bx bxl-github'></i>
+                      </a>
+                      <a href='https://nodejs.org' id='nod'>
+                        <i class='bx bxl-nodejs'></i>
+                      </a>
+                      <a href='https://apple.com' id='mac'>
+                        <i class='bx bxl-apple'></i>
+                      </a>
+                      <a href='https://python.org' id='pyt'>
+                        <i class='bx bxl-python'></i>
+                      </a>
+                      <a href='https://linuxfromscratch.org' id='lfs'>
+                        <i class='bx bxl-tux'></i>
+                      </a>
+                      <a href='https://en.wikipedia.org/wiki/HTML5' id='htm'>
+                        <i class='bx bxl-html5'></i>
+                      </a>
+                      <a href='https://telegram.org' id='tel'>
+                        <i class='bx bxl-telegram'></i>
+                      </a>
+                      <a href='https://gmail.com' id='gma'>
+                        <i class='bx bxl-gmail'></i>
+                      </a>
+                      <a href='https://jquery.com' id='jqy'>
+                        <i class='bx bxl-jquery'></i>
+                      </a>
+                      <a href='https://google.com/chrome/' id='chr'>
+                        <i class='bx bxl-chrome'></i>
+                      </a>
+                    </div>
+                  </div>
+                  <h1>
+                    projects <span id='emoji'>🎧</span>
+                  </h1>
+                  <div class='projects'>
+                    <div class='project_card'>
+                      <b>cadet</b>
+                                      <p>anonymous social media that allows you to post once a minute with automatic censoring<br/><br/><a id='exception' href='https://cadet.epidermal.link'>cadet.epidermal.link</a>
+              </p>
+                    </div>
+            </div><br/>
+            <p>
+<i class='bx bx-git-commit'></i>
+<b>latest commit</b> - {{commit}}
+</p> 🌀
+        </div>
     </div>
-    <div class='projects'>
-      <h3>projects</h3>
-      <div class='project_card'>
-        <b>cadet</b>
-						<p>anonymous social media that allows you to post once a minute with automatic censoring (cadet.epidermal.link)
-</p>
-      </div>
-    </div>
-    <p>
-      <i class='bx bx-git-commit'></i>
-      <b>latest commit</b> - {{commit}}
-    </p>
     <script>
-      tippy('#git', {
-        content: 'GitHub',
-      });
-      tippy('#vsc', {
-        content: 'Visual Studio Code',
-      });
-      tippy('#jqy', {
-        content: 'jQuery',
-      });
-      tippy('#nod', {
-        content: 'Node.js',
-      });
-      tippy('#mac', {
-        content: 'MacOS',
-      });
-      tippy('#mac', {
-        content: 'MacOS',
-      });
-      tippy('#pyt', {
-        content: 'Python',
-      });
-      tippy('#lfs', {
-        content: 'Linux from Scratch',
-      });
-      tippy('#gma', {
-        content: 'Google Mail',
-      });
-      tippy('#tel', {
-        content: 'Telegram',
-      });
-      tippy('#chr', {
-        content: 'Google Chrome',
-      });
-      tippy('#htm', {
-        content: 'HTML',
-      });
-    </script>
-  </BODY>
-</HTML>
+        tippy('#git', {
+          content: 'GitHub',
+        });
+        tippy('#vsc', {
+          content: 'Visual Studio Code',
+        });
+        tippy('#jqy', {
+          content: 'jQuery',
+        });
+        tippy('#nod', {
+          content: 'Node.js',
+        });
+        tippy('#mac', {
+          content: 'MacOS',
+        });
+        tippy('#mac', {
+          content: 'MacOS',
+        });
+        tippy('#pyt', {
+          content: 'Python',
+        });
+        tippy('#lfs', {
+          content: 'Linux from Scratch',
+        });
+        tippy('#gma', {
+          content: 'Google Mail',
+        });
+        tippy('#tel', {
+          content: 'Telegram',
+        });
+        tippy('#chr', {
+          content: 'Google Chrome',
+        });
+        tippy('#htm', {
+          content: 'HTML',
+        });
+      </script>
+</body>
+</html>
